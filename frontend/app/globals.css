@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 33% 97%; /* Cream background #f8f6f1 */
+    --foreground: 180 100% 10%;
+
+    --card: 48 33% 97%;
+    --card-foreground: 180 100% 10%;
+
+    --popover: 48 33% 97%;
+    --popover-foreground: 180 100% 10%;
+
+    --primary: 174 100% 15%; /* Deep teal #004d4d */
+    --primary-foreground: 48 33% 97%;
+
+    --secondary: 25 56% 63%; /* Copper/rose gold #d4a373 */
+    --secondary-foreground: 174 100% 15%;
+
+    --accent: 25 56% 63%; /* Copper/rose gold #d4a373 */
+    --accent-foreground: 174 100% 15%;
+
+    --muted: 48 20% 90%;
+    --muted-foreground: 174 10% 40%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 48 33% 97%;
+
+    --border: 174 15% 85%;
+    --input: 174 15% 85%;
+    --ring: 174 100% 15%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 174 100% 10%;
+    --foreground: 48 33% 97%;
+
+    --card: 174 100% 12%;
+    --card-foreground: 48 33% 97%;
+
+    --popover: 174 100% 12%;
+    --popover-foreground: 48 33% 97%;
+
+    --primary: 174 100% 20%;
+    --primary-foreground: 48 33% 97%;
+
+    --secondary: 25 56% 63%;
+    --secondary-foreground: 174 100% 15%;
+
+    --accent: 25 56% 63%;
+    --accent-foreground: 174 100% 15%;
+
+    --muted: 174 30% 20%;
+    --muted-foreground: 174 10% 70%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 48 33% 97%;
+
+    --border: 174 30% 25%;
+    --input: 174 30% 25%;
+    --ring: 25 56% 63%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+  p,
+  span,
+  div,
+  a,
+  button {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .gold-accent {
+    @apply border-accent border-b-2 w-20 my-4 mx-auto;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-background to-muted;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .script-heading {
+    @apply font-script text-accent;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-playfair);
+}
+
+.font-sans {
+  font-family: var(--font-montserrat);
+}
+
+.font-script {
+  font-family: var(--font-dancing);
+}
+
